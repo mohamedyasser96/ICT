@@ -1,0 +1,95 @@
+<div class="image-bg">
+    <!-- <div style='transform: translate(20%, 50%);'> -->
+    <div style='margin-top: 15%; margin-left: 30%'>
+            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('ISG Support Services')">
+                <clr-icon shape="plus"></clr-icon>
+            </button>
+    
+    </div>
+    <div style='margin-top: 5%; margin-left: 21%'>
+            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Customer Success')">
+                <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Deployment Services')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Dell Tech Managed Services')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 17.5%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Presales')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+    </div>
+    <div style='margin-top: 5%; margin-left: 21%'>
+            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Global Service Parts')">
+                <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Assets Management')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Sales')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 17.5%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('VMWare')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+    
+    </div>
+    <div style='margin-top: 5%; margin-left: 21.5%'>
+            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('RSA')">
+                <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Consulting')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Education Services')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 16.5%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Pricing')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+    
+    </div>
+    <div style='margin-top: 4.5%; margin-left: 22%'>
+            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Live Optics')">
+                <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Servers Business')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Presales')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+            <button  style='margin-left: 17%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Advanced Technologies R&I')">
+                    <clr-icon shape="plus"></clr-icon>
+            </button>
+    
+    </div>
+    <div style='margin-top: 5.5%; margin-left: 30%'>
+            <button  id='Presales' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Milky Way')">
+                <clr-icon shape="plus"></clr-icon>
+            </button>
+    </div>
+
+<div *ngIf='modal'>
+
+    <div class="modal" >
+            <div class="modal-dialog fadeDown in" role="dialog" aria-hidden="true">
+                <div class="modal-content">
+                    <h1>{{currentBu}}</h1>
+                    <h3>{{content}}</h3>
+                </div>
+                <button  id='Presales' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="closeModal()">
+                        <clr-icon shape="airplane" class="is-solid"></clr-icon>
+                    </button>
+        
+            </div>
+
+        </div>
+        <div class="modal-backdrop" aria-hidden="true"></div>
+
+</div>
+
+
+
+</div>
