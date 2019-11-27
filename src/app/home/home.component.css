@@ -2,8 +2,8 @@
     position: fixed; 
     top: 5%; 
     left: 0;
-    background-image: url("../../assets/dell.jpg"); 
-    background-size: cover;
+    /* background-image: url("../../assets/dell.jpg"); 
+    background-size: cover; */
     /* Preserve aspet ratio */
     width: 100%;
     height: 100%;
@@ -13,4 +13,24 @@
 
 .button-style {
     border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.modal-dialog{
+    width: 80% !important;
+}
+.BUname{
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0rem;
+}
+.box{
+    transform: translate(-239px, -34px); 
+    border: 5px solid #000000;
+    background-color:rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    justify-self: center;
 }

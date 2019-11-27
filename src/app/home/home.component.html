@@ -1,95 +1,167 @@
-<div class="image-bg">
-    <!-- <div style='transform: translate(20%, 50%);'> -->
-    <div style='margin-top: 15%; margin-left: 30%'>
-            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('ISG Support Services')">
-                <clr-icon shape="plus"></clr-icon>
-            </button>
-    
-    </div>
-    <div style='margin-top: 5%; margin-left: 21%'>
-            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Customer Success')">
-                <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Deployment Services')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Dell Tech Managed Services')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 17.5%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Presales')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-    </div>
-    <div style='margin-top: 5%; margin-left: 21%'>
-            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Global Service Parts')">
-                <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Assets Management')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Sales')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 17.5%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('VMWare')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-    
-    </div>
-    <div style='margin-top: 5%; margin-left: 21.5%'>
-            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('RSA')">
-                <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Consulting')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Education Services')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 16.5%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Pricing')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-    
-    </div>
-    <div style='margin-top: 4.5%; margin-left: 22%'>
-            <button  type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Live Optics')">
-                <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 18%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Servers Business')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 32%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Presales')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-            <button  style='margin-left: 17%' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Advanced Technologies R&I')">
-                    <clr-icon shape="plus"></clr-icon>
-            </button>
-    
-    </div>
-    <div style='margin-top: 5.5%; margin-left: 30%'>
-            <button  id='Presales' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Milky Way')">
-                <clr-icon shape="plus"></clr-icon>
-            </button>
-    </div>
-
-<div *ngIf='modal'>
-
-    <div class="modal" >
-            <div class="modal-dialog fadeDown in" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <h1>{{currentBu}}</h1>
-                    <h3>{{content}}</h3>
-                </div>
-                <button  id='Presales' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="closeModal()">
-                        <clr-icon shape="airplane" class="is-solid"></clr-icon>
-                    </button>
-        
-            </div>
-
-        </div>
-        <div class="modal-backdrop" aria-hidden="true"></div>
-
+<div *ngIf="video">
+    <video width="100%" heigh t="100%" autoplay="true" loop="true" (click)="closeVideo()">
+        <source src="../../assets/30 Second Timer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 
+<!-- <div style='transform: translate(20%, 50%);'> -->
+<div *ngIf="!video">
+    <img class="image-bg" src="../../assets/dell.jpg" />
+    <div style='top: 30%; left: 28.3%; position: fixed;'>
+        <div class="box" style="top: 28%; left: 28.3%; position: fixed;">
+            <h2 class="BUname">ISG Support Services</h2>
+        </div>    
+        <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('ISG Support Services')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
 
+    </div>
+    <div style='top: 45%; left: 21%; position: fixed;'>
+        <div class="box" style="top: 43%; left: 21%; position: fixed;">
+            <h2 class="BUname">Customer Success</h2>
+        </div>
+        <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Customer Success')">
+            <clr-icon class='icon-style' shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 53%; left: 21%; position: fixed;">
+            <h2 class="BUname">Deployment Services</h2>
+        </div>
+        <button style='top: 56%; left: 21.5%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Deployment Services')">
+
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 63%; left: 21.5%; position: fixed;">
+            <h2 class="BUname">Dell Tech Managed Services</h2>
+        </div>
+        <button style='top: 66%; left: 22%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Dell Tech Managed Services')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 73%; left: 22.5%;position: fixed;">
+            <h2 class="BUname">Presales</h2>
+        </div>
+        <button style='top: 76%; left: 22.5%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Presales')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+    </div>
+    <div style='top: 45%; left: 37%; position: fixed;'>
+        <div class="box" style="top: 43%; left: 37%; position: fixed;">
+                <h2 class="BUname">Global Service Parts</h2>
+        </div>
+        <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Global Service Parts')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 53%; left: 37%; position: fixed;">
+                <h2 class="BUname">Assets Management</h2>
+            </div>    
+        <button style='top: 56%; left: 37%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Assets Management')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 63%; left: 41%; position: fixed;">
+                <h2 class="BUname">Service Sales</h2>
+            </div>
+        <button style='top: 66%; left: 37.5%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Sales')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 73%; left: 43%; position: fixed;">
+                <h2 class="BUname">VMWare</h2>
+            </div>
+        <button style='top: 76%; left: 37.7%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('VMWare')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+
+    </div>
+    <div style='top: 45%; left: 64%; position: fixed;'>
+        <div class="box" style="top: 43%; left: 66%; position: fixed;">
+                <h2 class="BUname">RSA</h2>
+        </div>
+        <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('RSA')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 53%; left: 64%; position: fixed;">
+                <h2 class="BUname">Consulting</h2>
+        </div>
+        <button style='top: 56%; left: 64%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Consulting')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 63%; left: 64%; position: fixed;">
+                <h2 class="BUname">Education Services</h2>
+        </div>
+        <button style='top: 66%; left: 64%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Education Services')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 73%; left: 64%; position: fixed;">
+                <h2 class="BUname">Service Pricing</h2>
+        </div>
+        <button style='top: 76%; left: 63.5%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Pricing')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+
+    </div>
+    <div style='top: 45%; left: 80%; position: fixed;'>
+            <div class="box" style="top: 43%; left: 83%; position: fixed;">
+                    <h2 class="BUname">Live Optics</h2>
+            </div>
+        <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Live Optics')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 53%; left: 83%; position: fixed;">
+                <h2 class="BUname">Servers Business</h2>
+        </div>
+        <button style='top: 56%; left: 79.5%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Servers Business')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 63%; left: 83%; position: fixed;">
+                <h2 class="BUname">Deployment and Field Services</h2>
+        </div>
+        <button style='top: 66%; left: 79%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Deployment and Field Services')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+        <div class="box" style="top: 73%; left: 83%; position: fixed;">
+                <h2 class="BUname">Advanced Technologies R&I</h2>
+        </div>
+        <button style='top: 76%; left: 79%; position: fixed;' type="button"
+            class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Advanced Technologies R&I')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+
+    </div>
+    <div style='top: 30%; left: 68%; position: fixed;'>
+        <div class="box" style="top: 28%; left: 70%; position: fixed;">
+                <h2 class="BUname">Milky Way</h2>
+        </div>
+        <button id='Presales' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+            (click)="openModal('Milky Way')">
+            <clr-icon shape="plus" size='24'></clr-icon>
+        </button>
+    </div>
+
+    <clr-modal [(clrModalOpen)]="modal" [clrModalStaticBackdrop]="false" style="width: 80%">
+        <!-- <h3 class="modal-title">{{currentBu}}</h3> -->
+        <div class="modal-body">
+            <p style="font-size: 56px; line-height: 3rem">{{content}}</p>
+        </div>
+    </clr-modal>
 
 </div>

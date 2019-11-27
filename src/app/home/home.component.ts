@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   modal = false;
+  video = true
   clrModalOpen = 'false'
   currentBu = ''
   content = ''
@@ -36,6 +37,10 @@ export class HomeComponent implements OnInit {
 
   closeModal() {
     this.modal = false
+  }
+
+  closeVideo(){
+    this.video = false
   }
 
 }
