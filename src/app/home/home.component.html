@@ -1,159 +1,204 @@
 <div *ngIf="video">
     <video width="100%" heigh t="100%" autoplay="true" loop="true" (click)="closeVideo()">
-        <source src="../../assets/30 Second Timer.mp4" type="video/mp4">
+        <source src="../../assets/DellVideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <div class="box" style="top: 5%; left: 38%; position: fixed; border-radius: 10%; padding: 50px;">
+            <h1 class="videoTip">Touch anywhere to discover the COE</h1>
+    </div>  
 </div>
 
 <!-- <div style='transform: translate(20%, 50%);'> -->
 <div *ngIf="!video">
     <img class="image-bg" src="../../assets/dell.jpg" />
+    <div class="boxCOE" style="top: 5.3%; left: 31%; position: fixed; border-radius: 0%; padding: 90px;">
+            <h1 class="COETip">Tap on the Business units to learn more...</h1>
+    </div>  
     <div style='top: 30%; left: 28.3%; position: fixed;'>
-        <div class="box" style="top: 28%; left: 28.3%; position: fixed;">
+        <div class="box" style="top: 28%; left: 28.3%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('ISG Support Services')">
             <h2 class="BUname">ISG Support Services</h2>
         </div>    
         <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('ISG Support Services')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
 
     </div>
+    <div style='top: 30%; left: 80.4%; position: fixed;'>
+            <div class="box" style="top: 28%; left: 83.3%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('TechDev')">
+                <h2 class="BUname">TechDev</h2>
+            </div>    
+            <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+                (click)="openModal('ISG Support Services')">
+                <h2 class="BUname">+</h2>
+            </button>
+    
+        </div>
+
+
     <div style='top: 45%; left: 21%; position: fixed;'>
-        <div class="box" style="top: 43%; left: 21%; position: fixed;">
+        <div class="box" style="top: 43%; left: 21%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Customer Success')">
             <h2 class="BUname">Customer Success</h2>
         </div>
         <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Customer Success')">
-            <clr-icon class='icon-style' shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 53%; left: 21%; position: fixed;">
+
+        <div class="box" style="top: 53%; left: 21%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Deployment Services')">
             <h2 class="BUname">Deployment Services</h2>
         </div>
         <button style='top: 56%; left: 21.5%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Deployment Services')">
 
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 63%; left: 21.5%; position: fixed;">
+
+        <div class="box" style="top: 63%; left: 21.5%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Dell Tech Managed Services')">
             <h2 class="BUname">Dell Tech Managed Services</h2>
         </div>
         <button style='top: 66%; left: 22%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Dell Tech Managed Services')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 73%; left: 22.5%;position: fixed;">
+
+        <div class="box" style="top: 73%; left: 24.5%;position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Presales')">
             <h2 class="BUname">Presales</h2>
         </div>
         <button style='top: 76%; left: 22.5%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Presales')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
     </div>
+
+
+
+
     <div style='top: 45%; left: 37%; position: fixed;'>
-        <div class="box" style="top: 43%; left: 37%; position: fixed;">
+        <div class="box" style="top: 43%; left: 37%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Global Service Parts')">
                 <h2 class="BUname">Global Service Parts</h2>
         </div>
         <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Global Service Parts')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 53%; left: 37%; position: fixed;">
+
+        <div class="box" style="top: 53%; left: 37%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Assets Management')">
                 <h2 class="BUname">Assets Management</h2>
             </div>    
         <button style='top: 56%; left: 37%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Assets Management')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 63%; left: 41%; position: fixed;">
+
+        <div class="box" style="top: 63%; left: 41%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Service Sales')">
                 <h2 class="BUname">Service Sales</h2>
             </div>
         <button style='top: 66%; left: 37.5%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Sales')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 73%; left: 43%; position: fixed;">
+
+        <div class="box" style="top: 73%; left: 41%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('VMWare')">
                 <h2 class="BUname">VMWare</h2>
             </div>
         <button style='top: 76%; left: 37.7%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('VMWare')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
 
     </div>
+
+
+
     <div style='top: 45%; left: 64%; position: fixed;'>
-        <div class="box" style="top: 43%; left: 66%; position: fixed;">
+        <div class="box" style="top: 43%; left: 66%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('RSA')">
                 <h2 class="BUname">RSA</h2>
         </div>
         <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('RSA')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 53%; left: 64%; position: fixed;">
+
+        <div class="box" style="top: 53%; left: 64%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Consulting')">
                 <h2 class="BUname">Consulting</h2>
         </div>
         <button style='top: 56%; left: 64%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Consulting')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 63%; left: 64%; position: fixed;">
+
+        <div class="box" style="top: 63%; left: 64%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Education Services')">
                 <h2 class="BUname">Education Services</h2>
         </div>
         <button style='top: 66%; left: 64%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Education Services')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 73%; left: 64%; position: fixed;">
+
+        <div class="box" style="top: 73%; left: 64%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Service Pricing')">
                 <h2 class="BUname">Service Pricing</h2>
         </div>
         <button style='top: 76%; left: 63.5%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Service Pricing')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
 
     </div>
+
+
+
+
     <div style='top: 45%; left: 80%; position: fixed;'>
-            <div class="box" style="top: 43%; left: 83%; position: fixed;">
+            <div class="box" style="top: 43%; left: 83%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Live Optics')">
                     <h2 class="BUname">Live Optics</h2>
             </div>
         <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Live Optics')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 53%; left: 83%; position: fixed;">
+
+        <div class="box" style="top: 53%; left: 83%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Servers Business')">
                 <h2 class="BUname">Servers Business</h2>
         </div>
         <button style='top: 56%; left: 79.5%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Servers Business')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 63%; left: 83%; position: fixed;">
+
+        <div class="box" style="top: 63%; left: 83%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Deployment and Field Services')">
                 <h2 class="BUname">Deployment and Field Services</h2>
         </div>
         <button style='top: 66%; left: 79%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings" (click)="openModal('Deployment and Field Services')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
-        <div class="box" style="top: 73%; left: 83%; position: fixed;">
+
+        <div class="box" style="top: 73%; left: 83%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Advanced Technologies R&I')">
                 <h2 class="BUname">Advanced Technologies R&I</h2>
         </div>
         <button style='top: 76%; left: 79%; position: fixed;' type="button"
             class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Advanced Technologies R&I')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
 
     </div>
-    <div style='top: 30%; left: 68%; position: fixed;'>
-        <div class="box" style="top: 28%; left: 70%; position: fixed;">
+
+
+
+
+    <div style='top: 30%; left: 64.3%; position: fixed;'>
+        <div class="box" style="top: 28%; left: 66%; position: fixed; border-radius: 10%; padding: 15px;" (click)="openModal('Milky Way')">
                 <h2 class="BUname">Milky Way</h2>
         </div>
         <button id='Presales' type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Milky Way')">
-            <clr-icon shape="plus" size='24'></clr-icon>
+            <h2 class="BUname">+</h2>
         </button>
     </div>
 

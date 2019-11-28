@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { timeout } from 'q';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit {
   currentBu = ''
   content = ''
   businessUnits = {}
+  inactivityTimeout:any;
 
   ngOnInit() {
     this.getBUs()
@@ -33,14 +35,29 @@ export class HomeComponent implements OnInit {
     this.currentBu = name
     this.content = this.businessUnits[name]
     this.modal = true
+    this.resetInactivityTimeout()
   }
 
   closeModal() {
     this.modal = false
+    this.resetInactivityTimeout()
   }
 
   closeVideo(){
     this.video = false
+
+    this.resetInactivityTimeout()
+    
+  }
+
+  resetInactivityTimeout(){
+
+    if(this.inactivityTimeout)
+      clearTimeout(this.inactivityTimeout)
+
+    var inactivityTimeout = setTimeout(()=>{
+      this.video = true
+    }, 120000)
   }
 
 }
