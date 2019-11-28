@@ -52,8 +52,10 @@ export class HomeComponent implements OnInit {
 
   resetInactivityTimeout(){
 
-    if(this.inactivityTimeout)
+    if(this.inactivityTimeout){
       clearTimeout(this.inactivityTimeout)
+      this.video = false
+    }
 
     this.inactivityTimeout = setTimeout(()=>{
       this.video = true
