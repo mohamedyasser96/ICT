@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   video = true
   clrModalOpen = 'false'
   currentBu = ''
-  content = ''
+  content: any
   businessUnits = {}
   inactivityTimeout:any;
 

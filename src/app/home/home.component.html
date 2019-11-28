@@ -12,10 +12,10 @@
 <div *ngIf="!video">
     <img class="image-bg" src="../../assets/dell.jpg" />
     <div class="boxCOE" style="top: 4.5%; left: 31%; position: fixed; border-radius: 0%; padding: 62px;">
-            <h1 class="COETip">Tap on the Business units to learn more...</h1>
+            <h1 class="COETip">Tap on a Business Unit to learn more...</h1>
     </div>  
     <div style='top: 30%; left: 28.3%; position: fixed;'>
-        <div class="box" style="top: 28%; left: 29%; position: fixed; border-radius: 10%; padding: 8px;" (click)="openModal('ISG Support Services')">
+        <div class="box" style="top: 28%; left: 22%; position: fixed; border-radius: 10%; padding: 8px;" (click)="openModal('ISG Support Services')">
             <h2 class="BUname">ISG Support Services</h2>
         </div>    
         <!-- <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
@@ -23,6 +23,16 @@
             <h2 class="BUname">+</h2>
         </button> -->
 
+    </div>
+    <div style='top: 30%; left: 28.3%; position: fixed;'>
+            <div class="box" style="top: 28%; left: 40%; position: fixed; border-radius: 10%; padding: 8px;" (click)="openModal('IMS Expansion')">
+                <h2 class="BUname">IMS Expansion</h2>
+            </div>    
+            <!-- <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
+                (click)="openModal('ISG Support Services')">
+                <h2 class="BUname">+</h2>
+            </button> -->
+    
     </div>
     <div style='top: 30%; left: 80.4%; position: fixed;'>
             <div class="box" style="top: 28%; left: 85%; position: fixed; border-radius: 10%; padding:  8px;" (click)="openModal('TechDev')">
@@ -77,8 +87,8 @@
 
 
     <div style='top: 45%; left: 37%; position: fixed;'>
-        <div class="box" style="top: 41.5%; left: 39%; position: fixed; border-radius: 10%; padding:  8px;" (click)="openModal('Global Service Parts')">
-                <h2 class="BUname">Global Service Parts</h2>
+        <div class="box" style="top: 41.5%; left: 40.5%; position: fixed; border-radius: 10%; padding:  8px;" (click)="openModal('T&M Quoting')">
+                <h2 class="BUname">T&M Quoting</h2>
         </div>
         <!-- <button type="button" class="btn btn-icon btn-primary button-style" aria-label="settings"
             (click)="openModal('Global Service Parts')">
@@ -203,10 +213,15 @@
     </div>
 
     <clr-modal [(clrModalOpen)]="modal" [clrModalStaticBackdrop]="false" style="width: 80%">
-        <!-- <h3 class="modal-title">{{currentBu}}</h3> -->
+        <br><br><br>
+        <h1 class="modal-title">{{currentBu}}</h1>
         <div class="modal-body">
-            <p style="font-size: 56px; line-height: 3rem">{{content}}</p>
+            <div *ngFor="let c of content">
+                <p style="font-size: 56px; line-height: 3rem">{{c}}</p>
+                <br>
+            </div>
         </div>
+        <br>
     </clr-modal>
 
 </div>

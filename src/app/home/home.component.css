@@ -32,6 +32,7 @@
     margin-top: 0rem;
 }
 
+
 .COETip{
     color: whitesmoke;
     font-size: 100px;
@@ -52,4 +53,15 @@
     background-color:rgba(0, 0, 0, 0.8);
     width: fit-content;
     justify-self: center;
+}
+
+.modal-title{
+    font-size: 72px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.modal-body{
+    width: 80%;
+    margin-left: 10%;
 }
