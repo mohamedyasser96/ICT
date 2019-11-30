@@ -35,18 +35,18 @@ export class HomeComponent implements OnInit {
     this.currentBu = name
     this.content = this.businessUnits[name]
     this.modal = true
-    this.resetInactivityTimeout()
+    //this.resetInactivityTimeout()
   }
 
   closeModal() {
     this.modal = false
-    this.resetInactivityTimeout()
+    //this.resetInactivityTimeout()
   }
 
   closeVideo(){
     this.video = false
 
-    this.resetInactivityTimeout()
+    //this.resetInactivityTimeout()
     
   }
 
